@@ -1,0 +1,28 @@
+<html ng-app="money">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="assets/styles/style.css/">
+</head>
+
+<body ng-controller="MainController as mc">
+	<!--this can be modified for navbar-->
+	<button ng-class="{'active': mc.activeImg === 'pizza'}" ng-click="mc.setActiveImg('pizza')">Show me the pizza</button>
+	<button ng-class="{'active': mc.activeImg === 'money'}" ng-click="mc.setActiveImg('money')">Show me the money</button>
+	<button ng-class="{'active': mc.activeImg === 'bears'}" ng-click="mc.setActiveImg('bears')">How bout da bears?!</button>
+	<br/>
+<!--this can be put into divs to make a view-->
+	<img ng-show="mc.activeImg === 'pizza'" height="200" src="http://www.originaljuniorspizza.com/roni.jpg" /> {{vm.test}} {{1+1}}
+	<img ng-show="mc.activeImg === 'money'" height="200" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQW0Mb9NxFOFJ3Pgf9abKAnH-e5B3Gm937ObRS4VKqxXk3dvCJi"
+	/>
+	<img ng-show="mc.activeImg === 'bears'" height="200" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Chicago_Bears_logo.svg/1280px-Chicago_Bears_logo.svg.png"
+	/>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="app/app.js"></script>
+	<script src="app/components/maincontroller.js"></script>
+</body>
+
+</html
